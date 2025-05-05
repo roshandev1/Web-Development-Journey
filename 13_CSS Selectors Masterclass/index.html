@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <style>
+        /* Element selector for CSS */
+        div{
+            background-color: red;
+        }
+
+        /* Class selector for CSS */
+        .blue{
+            background-color: blue;
+            color:white
+        }
+
+        /* ID selector for CSS */
+        #green{
+            background-color: green;
+            color:white
+        }
+
+        /* Child combinator selector for CSS (only if direct child) */
+        div>p{
+            background-color: yellow;
+        }
+
+        /* Descendant combinator selector for CSS (any descendant) */
+        div p{
+            background-color: orange;
+        }
+
+        /* Universal selector for CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Adjacent sibling selector for CSS */
+        h1+p {
+            background-color: pink;
+        }
+
+        /* Pseudo-class selector for CSS */
+        a:visited{
+            color: black;
+        }
+        a:link{
+            color: red;
+        }
+        a:active{
+            background-color: tomato;
+        }
+        a:hover{
+            background-color: yellow;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <h1>Learning CSS Selectors</h1>
+    <p>This para is to show Adjacent sibling Selector</p>
+
+    <div>
+        I am a div used for element selector
+        <article>
+            <p>
+                I am a paragraph used for descendant combinator selector
+            </p>
+        </article>
+        
+    </div>
+    
+    <div class="blue">
+        I am also a div used for class selector  
+    </div>
+
+    <div id="green">
+         I am a div used for ID selector
+    </div>
+    <a href="https://www.google.com">Open Google</a>
+    <a href="https://www.facebook.com">Open facebook</a>
+</body>
+</html>
