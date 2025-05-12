@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts,texts and color properties</title>
+
+    <style>
+        /* Using import method, to import font from Google Fonts  */
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
+
+        h1{
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+        
+            /* Below given font is imported from Google Fonts. */
+            font-family: "Baloo Bhaijaan 2", sans-serif;
+     
+            text-decoration: underline;
+            text-decoration-style: dotted; /* style of the underline */
+
+            text-align: center; /* center the text */
+        }
+        p{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: 600; /*for boldness */
+            font-size: 15px;
+            line-height: 2; /* line height is the space between lines */
+            text-indent: 23px; /* indent the first line of the paragraph */
+        }
+        .p1{
+            letter-spacing: 3px; /* space between letters */
+        }
+        .Lorem{
+            border: 2px solid black; /* border of the paragraph */
+            width: 145px; /* width of the paragraph */
+            word-break: break-all; /* break the word if it is too long */
+            overflow: hidden; /* hide the overflow text */
+        }
+        h2{
+            text-transform: capitalize; /* Capitalize the first letter of each word */
+            text-decoration: underline;
+            text-decoration-color: aqua; /* color of the underline */
+            text-decoration-thickness: 7px; /* thickness of the underline */;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Fonts</h1>
+        <h2>about fonts</h2>
+        <p class="p1">This is paragraph for Fonts</p>
+        <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptates illum soluta earum illo voluptatibus voluptatum dolore nam facilis ipsum possimus maiores itaque libero, dignissimos temporibus quod ipsa repellendus natus odio harum commodi vitae laboriosam! Quam repellat aliquid suscipit commodi ipsa hic unde, nostrum soluta!</p>
+    </div>
+</body>
+</html>
