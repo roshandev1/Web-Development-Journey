@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity & Cascade</title>
+    <style>
+        /* The specificty of this selector is 1 */
+        h1{
+            color:aqua ;
+        }
+
+        /* The specificty of this selector is 1+ 10=11. Here 1 is specificity of h1 i.e element selector and 10 is of Class selector. This have specificity 11, which is highest in this all. Therefore this got implemented*/
+        h1.yellow{
+            color: yellow;
+        }
+
+        /* The specificty of this selector is 10 */
+        .cred{
+            color: red;
+        }
+
+        /* The specificty of this selector is 10 */
+        .cpurple{
+            color: purple;
+        }
+
+       /* the specificity of below is 1(anchor element) + 10(rohanclass) +10(harryclass)+ 10(href attribute) + 10(psuedoclass)=41.
+
+       a.rohanclass.harry-class[href]:hover{
+            color:aquamarine;
+        } */
+
+        /* Specificity Number: Universal selector(0), Element (1), Class (10), ID(100), Inline Styles(1000), !important(10000) */
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="yellow cred cpurple">CSS Specificity</h1>
+    </div>
+    
+</body>
+</html>
