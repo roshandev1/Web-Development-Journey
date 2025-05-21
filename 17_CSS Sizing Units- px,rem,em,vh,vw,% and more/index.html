@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        html{
+            font-size: 10px;
+        }
+
+        .box {
+
+            box-sizing: border-box;
+
+            border: 2px solid black;
+        
+
+            width: 50vw; /*half width of viewport width i.e display width.*/
+ 
+            height: 10vh; /*10% of viewport height i.e height of display.*/
+
+            background-color: aquamarine;
+
+            margin: auto; /*applying margin from left and right*/
+        }
+
+        .container {
+            box-sizing: border-box;
+
+            border: 2px solid black;
+            /* width: 2048px; */
+
+            width: 50vw; 
+            
+            min-height: 50vh; /* Now minimum height will remain half of viewport i.e display-size, but there is no maximum limit for height here. Therefore height will increase as per text content*/
+
+            background-color: aquamarine;
+
+            margin: 23px auto; /*applying margin from left-right auto margin, and 23px top-bottom margin.*/
+
+            font-size: 12px;
+        }
+
+        .container p{
+            /* font-size: 2em; (Para have twice the font-size given to parent element i.e here container having 12px.)*/
+
+            font-size: 2rem; /*(Para have twice the font-size given to root element i.e here html element having 10px.)*/
+
+            width: 50%; /*50% i.e half of parent's (container) width.*/
+            border: 2px solid black;
+        }
+
+        .mycontainer{
+            background-color: red;
+            color: yellow;
+            font-size: 22px;
+            width: 100vmin ; /* It will take height of laptop display for width. In laptop, vmin is height of display and in mobile, vmin is width of display.
+            Therefore for this device, 100vmin and 100vh is both same.*/ 
+
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This a Box
+    </div>
+
+    <div class="container">
+        <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo consectetur ipsam nesciunt exercitationem, quo rem voluptates molestias fugit quaerat animi dolorem. Dolore aliquid voluptatibus cumque, modi inventore neque eum beatae quis culpa porro nihil placeat enim quidem illo distinctio dolores consequuntur doloremque corrupti aliquam. Sunt veniam maiores placeat officia? Pariatur ullam ex autem aspernatur, alias officia!
+        </p>
+    </div>
+ 
+    <div class="mycontainer">
+        I am another container.
+    </div>
+</body>
+</html>
