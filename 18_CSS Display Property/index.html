@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display Property</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        background-color: red;
+
+        display: inline-block;
+        /* If we use only inline display property, padding and margin would not aplly from top. Therefore we used inline-block display property, using this property we made a div tag (which is block element) to a inline-block element. */
+
+        width: 233px;
+        padding: 24px;
+        margin: 20px;
+        border: 2px solid black;
+
+        display: inline-flex; /*(if we use only flex, next element come down. Now we used inline-flex, so it will not happen) */
+        justify-content: center;
+        /* The above two property bring the content of the box to the center of the box. */
+        
+      }
+
+      .box1{
+        /* display: none; (this removes the element and space allotted to it is taken by next elements) */
+
+        /* visibility: hidden; (this removes the element and space allotted to it is not taken by next element)  */
+      }
+
+      .box2 {
+        display: inline-block;
+        background-color: blueviolet;
+        padding: 24px;
+        margin: 20px;
+        border: 2px solid black;
+        width: 233px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">I am a Box</div>
+    <div class="box2">I am also a box</div>
+    <!-- Div tag is block element, therefore takes the total width of the line -->
+
+    <span>I am a Good</span>
+    <span>Boy</span>
+    <!-- Both the span will be displayed on same line, as span tag is a inline element. -->
+  </body>
+</html>
