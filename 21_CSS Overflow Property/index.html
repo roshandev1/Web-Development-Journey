@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Property</title>
+
+    <style>
+        .box{
+            width: 30vw;
+            height: 10vh;
+
+            border: 2px solid black;
+
+            overflow: scroll; 
+            /* This gives a scroll bar in the container in vertical and horizontal position.
+            There are also other overflow properties like hidden, visible and auto. */
+
+            white-space: nowrap;
+             /* The total text comes horizontally, and no text falls vertically. */
+            
+            text-overflow: ellipsis;
+            /* (Displays three dots at the end of the text, indicating its been truncated) */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, alias ipsam? Ut aliquam modi, nesciunt blanditiis ea quas doloribus! Ipsam odit eveniet a corporis id maiores recusandae quos, beatae commodi accusantium repellat repudiandae minus blanditiis? Ex quo modi neque quibusdam repellendus laboriosam sint cupiditate soluta tempore commodi tenetur maiores cumque culpa mollitia quisquam dolor natus, incidunt aspernatur, praesentium unde. Earum unde esse, natus magni quam odio maxime!
+    </div>
+</body>
+</html>
