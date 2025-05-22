@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists</title>
+
+    <style>
+        nav ul li {
+
+            list-style:decimal-leading-zero;
+            color: yellow;
+
+            background-color: blue;
+             /* (Only list items have BG color, not the marker.) */
+
+             list-style-position: inside;
+             /* (Now the marker also have BG color. Now whatever we apply on this list, we will get that on markers also. ) */
+
+             border: 2px solid black;
+
+             /* list-style-image: url("https://en.wikipedia.org/wiki/Train#/media/File:Pilatus_railway_train.jpg"); */
+
+            list-style-type: "🙂";
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li style="list-style: none;">Home</li>  
+            <!-- The above part will not have a marker on left-side of the item.  -->
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
