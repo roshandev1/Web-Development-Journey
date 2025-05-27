@@ -13,10 +13,10 @@ This Faulty calc does the following :
    It performs wrong operation 10% of the times.
 */
 
-let random = Math.random();
+let random = Math.random(); //gives random number from 0 to 1.
 console.log(random);
 
-let a = prompt("Enter first number : ");
+let a = prompt("Enter first number : "); //prompt takes input in browser only
 let b = prompt("Enter Operation to perform : ");
 let c = prompt("Enter second number : ");
 
@@ -31,6 +31,7 @@ if(random>0.1){
     //perform correct calculation (this is 90% of the times)
 
     console.log(`The result is ${eval(`${a} ${b} ${c}`)}`);
+    //eval() -> evaluates a string of code in JavaScript. If it is expression, it returns the value of the expression.
     //eval() is not recommeded to use more in products.
     //This is a easier method to solve problems.
 
@@ -39,7 +40,7 @@ if(random>0.1){
 else
     //Perform incorrect calculation (this is 10% of the times) 
     
-   c = obj(c);
+   c = obj(c); //c becomes equal to incorrect operations given in obj.
 
    console.log(`The result is ${eval(`${a} ${b} ${c}`)}`);
 
