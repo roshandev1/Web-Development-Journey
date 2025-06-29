@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More About JS and DOM events</title>
+</head>
+<body>
+    <div class="container red bg-green">
+        <div class="box" style="display: flex;" data-createdby="Roshan">Hey, I am a Box1.</div>
+        <div class="box">Hey, I am a Box2</div>
+    </div>
+<script src="script.js"></script>
+    <script>
+
+        let div = document.createElement("div"); //creates div.
+        div.innerHTML="I have been inserted <b>by Roshan</b>"; //insert html inside div.
+        div.setAttribute("class","created"); //created a class named created in which this div is present.
+        document.querySelector(".container").append(div); //append div inside container class at the end of ".container" node. We also have 'prepend'-put inside node at the beginning, 'before'-put before the node, 'after'-put after the node, and 'replaceWith'-replace the node .
+
+        let cont=document.querySelector(".container");
+        cont.insertAdjacentHTML("afterbegin","<p> I am learning Web development.</p>"); // there are other methods like "afterbegin". These are "beforebegin", "afterend", and "beforeend".
+
+
+    </script>
+</body>
+</html>
