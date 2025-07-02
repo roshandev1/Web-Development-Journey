@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage Builder</title>
+
+    <style>
+      .card {
+        display: flex;
+        align-items: center;
+        border: 2px solid black;
+        width: 800px;
+        justify-content: center;
+        padding: 12px;
+        margin: 5px;
+      }
+      .image img {
+        margin: 10px;
+        width: 350px;
+      }
+      .image {
+        position: relative;
+      }
+      .text h1,
+      p {
+        padding: 2px;
+      }
+      .capsule {
+        position: absolute;
+        bottom: 30px;
+        z-index: 10; 
+        right: 4px;
+        background: #242020;
+        opacity: 0.9;
+        color: white;
+        border-radius: 3px;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="image">
+          <img src="cardimage.jpg" alt="" />
+
+          <div class="capsule">3:49</div>
+        </div>
+        <div class="text">
+          <h1>Raataan Lambiyan | video song | Sidhharth | Kiara</h1>
+          <p>FreeMusicWorld . 735M views . 2 months ago</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
