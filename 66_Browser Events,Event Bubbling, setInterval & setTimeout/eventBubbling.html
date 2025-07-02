@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Event Bubbling</title>
+
+    <style>
+        
+        .child{
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            color: blue;
+            display: flex;
+            justify-content: center;
+        }
+
+        .childContainer{
+            background-color: blueviolet;
+            padding:14px;
+            margin: 14px;
+        }
+
+        .container{
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Event Bubbling is how events move from the innermost element to the Outermost one when something happens, like a click.  -->
+
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">
+                I am a Child.
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.querySelector(".child").addEventListener("click",()=>{
+            alert("Child was clicked!");
+        })
+
+        document.querySelector(".childContainer").addEventListener("click",(e)=>{
+            e.stopPropagation(); //Now the event bubbling stops at childContainer. If you click on child, then "Child was clicked" and "childContainer was clicked" will come; it will not go to "container was clicked".
+            alert("Child-Container was clicked!");
+        })
+
+        document.querySelector(".container").addEventListener("click",()=>{
+            alert("container was clicked!");
+        })
+
+        function getRandomColor(){
+            let val1= Math.ceil(0 + Math.random() * 255)
+            let val2= Math.ceil(0 + Math.random() * 255)
+            let val3= Math.ceil(0 + Math.random() * 255)
+
+            return `rgb(${val1},${val2},${val3})`;
+        }
+
+        let a = setInterval(()=>{
+            document.querySelector(".childContainer").style.background = getRandomColor();
+        }, 500);
+//Above code produces random color using function and at set time intervals of 500 miliseconds.
+
+        // clearInterval(a); (This clears the interval, and no change happens.) 
+
+        setTimeout(()=>{
+            document.querySelector(".container").style.background = getRandomColor();
+        }, 2000);
+        //Above code changes the color of container class only once after 2 sec and then stops.
+ 
+        //clearTimeout() (to cancel the execution.)
+    </script>
+</body>
+</html>
